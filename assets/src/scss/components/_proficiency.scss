@@ -1,0 +1,46 @@
+#proficiency {
+	background: #757F9A; /* fallback for old browsers */
+	background: linear-gradient(to left, #757F9A , #D7DDE8);
+	height: 100vh;
+	text-align: center;
+
+	.heading-text {
+		padding-top: 6rem;
+		h1 {
+			@include heading-font(2.7rem);
+			font-weight: 500;
+			padding: 0;
+			margin: 0;
+			text-transform: uppercase;
+
+			span {
+				background: -webkit-linear-gradient(135deg, #FF9F65, #DED37E, #26BDA6);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+			}
+
+			// Below 34em (544px)
+			@include media(">sm") {
+				@include heading-font(3.5rem);
+				font-weight: normal;
+				color: #1D1F20;
+			}
+
+			// Below 62em (992px)
+			@include media("<lg") {
+				@include heading-font(3.7rem);
+			}
+		}
+
+		h5 {
+			@include primary-font(1rem);
+			color: #444;
+			text-align: center;
+			text-transform: none;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 5rem;
+		}
+	}
+}
+

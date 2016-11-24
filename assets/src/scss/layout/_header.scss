@@ -4,7 +4,7 @@ header {
     background-color: #FFF9EA;
     display: flex;
     flex-direction: row;
-    height: 7rem;
+    height: 5rem;
     padding: 0 15px;
     position: fixed;
     -webkit-justify-content: space-between;
@@ -18,12 +18,10 @@ header {
 }
 
 .site-logo {
-    transition: color 200ms cubic-bezier(.55, 0, .1, 1);
-    color: #30acff;
-    font-size: 3rem;
+    img {
+      width: 80%;
+    }
 }
-
-.ok-header__logo:hover {color: #546edb}
 
 /* okayNav styles */
 body.okayNav-loaded {
@@ -37,11 +35,12 @@ body.okayNav-loaded {
   /* We want two navigations - one hidden and one visible */
   float: left;
   list-style: none;
+  margin-bottom: 0;
   padding-right: 20px;
 }
 .okayNav a {
   /* Links general styling */
-  @include primary-font(1.1rem);
+  @include primary-font(1rem);
   font-weight: normal;
   color: #2e2e33;
   position: relative;
@@ -55,6 +54,7 @@ body.okayNav-loaded {
 }
 .okayNav__nav--visible li {
   display: inline-block;
+  margin: 0;
 }
 .okayNav__nav--visible a {
   /* Link styling for the visible part of the nav */

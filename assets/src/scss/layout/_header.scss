@@ -1,7 +1,7 @@
 /* Header styles */
 header {
     align-items: center;
-    background-color: #fff;
+    background-color: #FFF9EA;
     display: flex;
     flex-direction: row;
     height: 7rem;
@@ -13,7 +13,8 @@ header {
     top: 0;
     right: 0;
     left: 0;
-    width: 100%
+    width: 100%;
+    z-index: 9;
 }
 
 .site-logo {
@@ -30,10 +31,7 @@ body.okayNav-loaded {
 }
 .okayNav:not(.loaded) {
   visibility: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .okayNav ul {
   /* We want two navigations - one hidden and one visible */
@@ -43,9 +41,9 @@ body.okayNav-loaded {
 }
 .okayNav a {
   /* Links general styling */
+  @include primary-font(1.1rem);
+  font-weight: normal;
   color: #2e2e33;
-  font-size: 1.2rem;
-  font-weight: bold;
   position: relative;
   z-index: 1;
   text-decoration: none;
@@ -53,6 +51,7 @@ body.okayNav-loaded {
 .okayNav__nav--visible {
   overflow: hidden;
   white-space: nowrap;
+  //background-image: url(../img/menu-bg.png);
 }
 .okayNav__nav--visible li {
   display: inline-block;
@@ -60,11 +59,16 @@ body.okayNav-loaded {
 .okayNav__nav--visible a {
   /* Link styling for the visible part of the nav */
   display: block;
-  transition: color 200ms cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s;
   padding: 15px 15px;
+  text-transform: uppercase;
 }
 .okayNav__nav--visible a:hover {
-  color: #546edb;
+  color: #e23b4a;
+  font-weight: bold;
+  background: -webkit-linear-gradient(330deg, #bebebe 0%, #076cab 25%, #1090c7 50%, #c4fcfe 75%, #58a0bd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* Link styling for the off-screen part of the nav */
 .okayNav__nav--invisible {
@@ -83,13 +87,11 @@ body.okayNav-loaded {
 }
 .okayNav__nav--invisible.nav-left {
   left: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .okayNav__nav--invisible.nav-right {
   right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 .okayNav__nav--invisible.transition-enabled {
   transition: -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
@@ -97,8 +99,7 @@ body.okayNav-loaded {
   transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
 }
 .okayNav__nav--invisible.nav-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 /* Kebab icon */
 .okayNav__menu-toggle {
@@ -112,15 +113,12 @@ body.okayNav-loaded {
   float: left;
   margin-right: 2rem;
   z-index: 1;
-  top: 38px;
+  top: 28px;
 }
 .okayNav__menu-toggle.okay-invisible {
   position: absolute;
   opacity: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
 }
 .okayNav__menu-toggle span {
@@ -140,16 +138,14 @@ body.okayNav-loaded {
 }
 .okayNav__menu-toggle span:nth-child(2) {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .okayNav__menu-toggle span:nth-child(3) {
   bottom: 0;
 }
 .okayNav__menu-toggle.icon--active {
   /* Kebab icon when off-screen nav is open */
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .okayNav__menu-toggle.icon--active span {
   background: #546edb;

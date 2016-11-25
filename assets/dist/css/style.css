@@ -178,7 +178,6 @@ table.table tr th {
 	background-attachment: fixed;
 	background-size:  cover;  */
   height: 100vh;
-  padding-top: 7rem;
   text-align: center; 
   background: #f09819;
   /* fallback for old browsers */
@@ -187,11 +186,30 @@ table.table tr th {
   background:      -o-linear-gradient(right, #f09819, #edde5d);
   background:         linear-gradient(to left, #f09819, #edde5d);
 }
-#intro .intro-text {
+#intro video {
+  min-width: 100%; 
+  min-height: 100%;
+}
+#intro .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #231f20;
+  background-image: url(/wp-content/themes/upmedio/images/dot-matrix.png);
+  opacity: .6;
+}
+#intro .container {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+#intro .container .intro-text {
   margin-top: 13rem;
   text-align: center;
 }
-#intro .intro-text h1 {
+#intro .container .intro-text h1 {
   padding: 0;
   margin: 0; 
   font-family: 'Ubuntu', sans-serif;
@@ -203,7 +221,7 @@ table.table tr th {
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
-#intro .intro-text h1 span {
+#intro .container .intro-text h1 span {
   background: -webkit-linear-gradient(0deg, #96301e 0%, #c7c958 10%, #1c932e 20%, #4aa5a8 30%, #595aa5 40%, #541043 50%, #1c3a3f 60%, #52afb7 70%, #4eaa4c 80%, #96301e 90%, #c7c958 100%);
   background:      -o-linear-gradient(0deg, #96301e 0%, #c7c958 10%, #1c932e 20%, #4aa5a8 30%, #595aa5 40%, #541043 50%, #1c3a3f 60%, #52afb7 70%, #4eaa4c 80%, #96301e 90%, #c7c958 100%);
   background:         linear-gradient(90deg, #96301e 0%, #c7c958 10%, #1c932e 20%, #4aa5a8 30%, #595aa5 40%, #541043 50%, #1c3a3f 60%, #52afb7 70%, #4eaa4c 80%, #96301e 90%, #c7c958 100%);
@@ -244,7 +262,7 @@ table.table tr th {
   }
 }
 @media (min-width: 34.01em) {
-  #intro .intro-text h1 {
+  #intro .container .intro-text h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 4.5rem;
     font-weight: 600;
@@ -257,7 +275,7 @@ table.table tr th {
   }
 }
 @media (max-width: 61.99em) {
-  #intro .intro-text h1 {
+  #intro .container .intro-text h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.7rem;
     font-weight: 600;
@@ -267,18 +285,18 @@ table.table tr th {
     text-rendering: optimizeLegibility;
   }
 }
-#intro .intro-text h4 {
+#intro .container .intro-text h4 {
   padding: 0;
   margin: 0;
   margin-bottom: 3rem; 
   font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5625;
-  color: #444;
+  color: #fff;
   text-align: center;
   text-transform: none;
 }
-#intro .btn {
+#intro .container .btn {
   display: inline-block;
   padding: 18px 80px 20px;
   margin: .625rem;
@@ -303,13 +321,12 @@ table.table tr th {
        -o-transition: all .7s ease-out;
           transition: all .7s ease-out;
 }
-#intro .btn:hover {
+#intro .container .btn:hover {
   color: #fff;
   background-position: 99% 50%; 
   border: 1px solid rgba(223, 190, 106, 0);
 }
-
-.signal {
+#intro .signal {
   position: absolute;
   top: 27%;
   left: 0;
@@ -326,8 +343,7 @@ table.table tr th {
        -o-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-
-.signal-2 {
+#intro .signal-2 {
   position: absolute;
   top: 3%;
   right: 0;
@@ -344,8 +360,7 @@ table.table tr th {
        -o-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-
-.signal-3 {
+#intro .signal-3 {
   position: absolute;
   right: 80%;
   bottom: 15%;
@@ -955,7 +970,7 @@ header {
   height: 5rem;
   padding: 0 15px;
           flex-direction: row;
-  background-color: #fff9ea;
+  background-color: transparent;
 
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -969,6 +984,11 @@ header {
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
           justify-content: space-between;
+}
+header .active {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
 }
 
 .site-logo img {
@@ -1022,7 +1042,8 @@ body.okayNav-loaded {
   /* Link styling for the visible part of the nav */
   display: block;
   padding: 15px 15px;
-  text-transform: uppercase; 
+  color: #fff; 
+  text-transform: uppercase;
   -webkit-transition: all .5s;
        -o-transition: all .5s;
           transition: all .5s;

@@ -1,8 +1,13 @@
 #proficiency {
-	background: #757F9A; /* fallback for old browsers */
-	background: linear-gradient(to left, #757F9A , #D7DDE8);
+	background: #24C6DC; /* fallback for old browsers */
+	background: linear-gradient(to left, #24C6DC , #514A9D);
 	height: 100vh;
 	text-align: center;
+
+	// Below 62em (992px)
+	@include media("<lg") {
+		height: auto;
+	}
 
 	.heading-text {
 		padding-top: 6rem;

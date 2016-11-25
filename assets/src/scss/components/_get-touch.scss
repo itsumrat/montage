@@ -3,7 +3,11 @@
 	background: linear-gradient(to left, #EFEFBB , #D4D3DD); 
 	height: 300px;
 	padding: 3rem 0 0 0;  
-	text-align: center;   
+	text-align: center; 
+	// Below 34em (544px)
+	@include media("<sm") {
+		height: auto;
+	}  
 
 	h1 {
 		@include heading-font(2.7rem);

@@ -1,9 +1,14 @@
 /* Testimonials */
 #testimonial {
-    background: #ECE9E6; /* fallback for old browsers */
-    background: linear-gradient(to left, #ECE9E6 , #FFFFFF); 
+    background: #67B26F; /* fallback for old browsers */
+    background: linear-gradient(to left, #67B26F , #4ca2cd); 
     height: 100vh;  
     text-align: center;
+
+    // Below 62em (992px)
+    @include media("<lg") {
+        height: auto;
+    }
 
     h1 {
         @include heading-font(2.7rem);
@@ -47,9 +52,17 @@
             blockquote {
                 @include testimonial-quote;
                 float: right;
+                // Below 48em (768px)
+                @include media("<md") {
+                    float: none;
+                }
 
                 p {
                     text-align: left;
+                    // Below 48em (768px)
+                    @include media("<md") {
+                        float: none;
+                    }
                 }
             }
             figure {

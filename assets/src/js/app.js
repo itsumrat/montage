@@ -42,6 +42,17 @@ jQuery(document).ready(function($){
 		circle.css({top: y+'px', left: x+'px'}).addClass("animate");
 	})
 
+	// Work
+	$('a[href="#"]').click(function(e){e.preventDefault();});
+
+	var $grid = $('.grid').isotope();
+	// filter items on button click
+	$('.control').on( 'click', 'a', function() {
+	  var filterValue = $(this).attr('data-filter');
+	  $grid.isotope({ filter: filterValue });
+	});
+
+
 });
 
 

@@ -1026,6 +1026,31 @@ table.table tr th {
   color: #fff;
 }
 
+.thumbnails {
+  text-align: center;
+}
+
+.thumbnails img {
+  margin: 10px;
+}
+
+.grid {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 641px) {
+  .grid {
+    width: 640px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    width: 960px;
+  }
+}
+
 /*
  * Default
  * 

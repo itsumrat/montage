@@ -3,6 +3,7 @@
 	background: linear-gradient(to left, #24C6DC , #514A9D);
 	height: 100vh;
 	text-align: center;
+	padding: 10rem;
 
 	// Below 62em (992px)
 	@include media("<lg") {
@@ -10,7 +11,6 @@
 	}
 
 	.heading-text {
-		padding-top: 6rem;
 		h1 {
 			@include heading-font(2.7rem);
 			font-weight: 500;
@@ -47,5 +47,18 @@
 			margin-bottom: 5rem;
 		}
 	}
+	.circle-box {
+		display: inline-block;
+
+		#bluecircle,
+		#redcircle,
+		#yellowcircle,
+		#blackcircle {
+			@include ui-card;
+		}
+	}
+	@media screen and (min-width: 1900px){
+      
+  }
 }
 

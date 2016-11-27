@@ -4,6 +4,7 @@
     background: linear-gradient(to left, #67B26F , #4ca2cd); 
     height: 100vh;  
     text-align: center;
+    padding: 7rem;
 
     // Below 62em (992px)
     @include media("<lg") {

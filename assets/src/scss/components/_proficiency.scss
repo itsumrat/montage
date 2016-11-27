@@ -11,12 +11,12 @@
 
 	.heading-text {
 		padding-top: 6rem;
-		h1 {
-			@include heading-font(2.7rem);
-			font-weight: 500;
-			padding: 0;
-			margin: 0;
-			text-transform: capitalize;
+		h2 {
+			display: inline-block;
+	      @include heading-font(3rem);
+	      font-weight: normal;
+	      text-transform: uppercase;
+	      margin-bottom: 2rem;
 
 			span {
 				background: -webkit-linear-gradient(135deg, #FF9F65, #DED37E, #26BDA6);
@@ -47,5 +47,18 @@
 			margin-bottom: 5rem;
 		}
 	}
+	.circle-box {
+		display: inline-block;
+
+		#bluecircle,
+		#redcircle,
+		#yellowcircle,
+		#blackcircle {
+			@include ui-card;
+		}
+	}
 }
 
+.percircle.big {
+    font-size: 200px;
+}

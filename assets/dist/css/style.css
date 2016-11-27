@@ -9,6 +9,8 @@ Licensed Commercial
 Copyright 2015-2015 Saddam Azad
 */
 @import url("https://fonts.googleapis.com/css?family=Lato|Roboto|Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
 body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
@@ -178,8 +180,9 @@ table.table tr th {
 	background-attachment: fixed;
 	background-size:  cover;  */
   height: 100vh;
+  overflow: hidden; 
   color: #fff;
-  text-align: center; 
+  text-align: center;
   background: #f09819;
   /* fallback for old browsers */
   background: -webkit-gradient(linear, right top, left top, from(#f09819), to(#edde5d));
@@ -270,11 +273,15 @@ table.table tr th {
 @media (min-width: 34.01em) {
   #intro .container .intro-text h1 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 4.5rem;
+    font-family: 'Monoton', cursive;
+    font-size: 4rem;
     font-weight: 600;
+    font-weight: 900;
     font-weight: normal;
     line-height: 1.5;
-    color: #fff; 
+    color: #fff;
+    text-transform: uppercase;
+    word-spacing: 30px; 
 
     -webkit-font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
@@ -295,11 +302,12 @@ table.table tr th {
   padding: 0;
   margin: 0;
   margin-bottom: 3rem; 
-  font-family: 'Lato', sans-serif;
+  font-family: 'Russo One', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5625;
   color: #fff;
   text-align: center;
+  text-shadow: 0 4px 3px rgba(0, 0, 0, .4), 0 8px 13px rgba(0, 0, 0, .1), 0 18px 23px rgba(0, 0, 0, .1);
   text-transform: none;
 }
 #intro .container .btn {
@@ -435,110 +443,18 @@ table.table tr th {
   }
 }
 
-.loading {
-  position: absolute;
-  top: 50%;
-  right: 0;
-}
-
-.loading-bar {
-  display: inline-block;
-  width: 4px;
-  height: 18px;
-  border-radius: 4px;
-  -webkit-animation: loading 1s ease-in-out infinite;
-       -o-animation: loading 1s ease-in-out infinite;
-          animation: loading 1s ease-in-out infinite;
-}
-
-.loading-bar:nth-child(1) {
-  background-color: #3498db;
-  -webkit-animation-delay: 0;
-       -o-animation-delay: 0;
-          animation-delay: 0;
-}
-
-.loading-bar:nth-child(2) {
-  background-color: #c0392b;
-  -webkit-animation-delay: .09s;
-       -o-animation-delay: .09s;
-          animation-delay: .09s;
-}
-
-.loading-bar:nth-child(3) {
-  background-color: #f1c40f;
-  -webkit-animation-delay: .18s;
-       -o-animation-delay: .18s;
-          animation-delay: .18s;
-}
-
-.loading-bar:nth-child(4) {
-  background-color: #27ae60;
-  -webkit-animation-delay: .27s;
-       -o-animation-delay: .27s;
-          animation-delay: .27s;
-}
-
-@-webkit-keyframes loading {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  20% {
-    -webkit-transform: scale(1, 2.2);
-            transform: scale(1, 2.2);
-  }
-  40% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-o-keyframes loading {
-  0% {
-    -o-transform: scale(1);
-       transform: scale(1);
-  }
-  20% {
-    -o-transform: scale(1, 2.2);
-       transform: scale(1, 2.2);
-  }
-  40% {
-    -o-transform: scale(1);
-       transform: scale(1);
-  }
-}
-
-@keyframes loading {
-  0% {
-    -webkit-transform: scale(1);
-         -o-transform: scale(1);
-            transform: scale(1);
-  }
-  20% {
-    -webkit-transform: scale(1, 2.2);
-         -o-transform: scale(1, 2.2);
-            transform: scale(1, 2.2);
-  }
-  40% {
-    -webkit-transform: scale(1);
-         -o-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 .spinner {
   position: absolute;
   right: 0;
   width: 28px;
   height: 28px;
   margin: 50px;
-  border: 8px solid #fff;
+  border: 5px solid #f4f4f4;
   border-right-color: transparent;
   border-radius: 50%; 
-  -webkit-animation: rotate .8s infinite linear;
-       -o-animation: rotate .8s infinite linear;
-          animation: rotate .8s infinite linear;
+  -webkit-animation: rotate 1s infinite linear;
+       -o-animation: rotate 1s infinite linear;
+          animation: rotate 1s infinite linear;
 }
 
 @-webkit-keyframes rotate {
@@ -637,27 +553,27 @@ table.table tr th {
 #proficiency .heading-text {
   padding-top: 6rem;
 }
-#proficiency .heading-text h1 {
-  padding: 0;
-  margin: 0;
+#proficiency .heading-text h2 {
+  display: inline-block;
+  margin-bottom: 2rem; 
   font-family: 'Ubuntu', sans-serif;
-  font-size: 2.7rem;
+  font-size: 3rem;
   font-weight: 600;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 1.5;
-  text-transform: capitalize; 
+  text-transform: uppercase;
 
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
-#proficiency .heading-text h1 span {
+#proficiency .heading-text h2 span {
   background: -webkit-linear-gradient(135deg, #ff9f65, #ded37e, #26bda6);
   -webkit-background-clip: text;
 
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 34.01em) {
-  #proficiency .heading-text h1 {
+  #proficiency .heading-text h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.5rem;
     font-weight: 600;
@@ -670,7 +586,7 @@ table.table tr th {
   }
 }
 @media (max-width: 61.99em) {
-  #proficiency .heading-text h1 {
+  #proficiency .heading-text h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.7rem;
     font-weight: 600;
@@ -691,6 +607,20 @@ table.table tr th {
   text-align: center;
   text-transform: none;
 }
+#proficiency .circle-box {
+  display: inline-block;
+}
+#proficiency .circle-box #bluecircle,
+    #proficiency .circle-box #redcircle,
+    #proficiency .circle-box #yellowcircle,
+    #proficiency .circle-box #blackcircle {
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
+}
+
+.percircle.big {
+  font-size: 200px;
+}
 
 /* Testimonials */
 #testimonial {
@@ -708,27 +638,27 @@ table.table tr th {
     height: auto;
   }
 }
-#testimonial h1 {
-  padding: 2rem;
-  margin: 0;
+#testimonial h2 {
+  display: inline-block;
+  margin-bottom: 2rem; 
   font-family: 'Ubuntu', sans-serif;
-  font-size: 2.7rem;
+  font-size: 3rem;
   font-weight: 600;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 1.5;
-  text-transform: capitalize; 
+  text-transform: uppercase;
 
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
-#testimonial h1 span {
+#testimonial h2 span {
   background: -webkit-linear-gradient(135deg, #23966c, #faaa54, #e23b4a);
   -webkit-background-clip: text;
 
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 34.01em) {
-  #testimonial h1 {
+  #testimonial h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.5rem;
     font-weight: 600;
@@ -741,7 +671,7 @@ table.table tr th {
   }
 }
 @media (max-width: 61.99em) {
-  #testimonial h1 {
+  #testimonial h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.7rem;
     font-weight: 600;
@@ -956,28 +886,26 @@ table.table tr th {
     height: auto;
   }
 }
-#get-in-touch h1 {
-  padding: 0;
+#get-in-touch h2 {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 600;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 1.5;
-  color: #3c4144; 
-  text-transform: capitalize;
+  text-transform: uppercase; 
 
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
-#get-in-touch h1 span {
+#get-in-touch h2 span {
   background: -webkit-linear-gradient(135deg, #23966c, #faaa54, #e23b4a);
   -webkit-background-clip: text;
 
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 34.01em) {
-  #get-in-touch h1 {
+  #get-in-touch h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3rem;
     font-weight: 600;
@@ -990,7 +918,7 @@ table.table tr th {
   }
 }
 @media (max-width: 61.99em) {
-  #get-in-touch h1 {
+  #get-in-touch h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.7rem;
     font-weight: 600;
@@ -1027,9 +955,34 @@ table.table tr th {
 }
 
 .thumbnails {
+  color: #006cad; 
   text-align: center;
 }
+.thumbnails .control {
+  background-color: #e6e6e6;
+}
+.thumbnails .control h2 {
+  display: inline-block;
+  margin-bottom: 2rem; 
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  font-weight: normal;
+  line-height: 1.5;
+  text-transform: uppercase;
 
+  -webkit-font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+.thumbnails .control .btn {
+  margin-bottom: 1.7rem;
+  overflow: hidden; 
+  text-transform: uppercase;
+}
+.thumbnails .control .btn:hover {
+  border: 2px solid #006cad;
+  border-radius: 0;
+}
 .thumbnails img {
   margin: 10px;
 }
@@ -1291,10 +1244,5 @@ footer {
   font-size: 16px; 
   color: #fff;
   text-align: center;
-  background: #be93c5;
-  /* fallback for old browsers */
-  background: -webkit-gradient(linear, right top, left top, from(#be93c5), to(#7bc6cc));
-  background: -webkit-linear-gradient(right, #be93c5, #7bc6cc);
-  background:      -o-linear-gradient(right, #be93c5, #7bc6cc);
-  background:         linear-gradient(to left, #be93c5, #7bc6cc);
+  background-color: #006cad;
 }

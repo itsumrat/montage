@@ -9,13 +9,11 @@
 		height: auto;
 	}  
 
-	h1 {
-		@include heading-font(2.7rem);
-        font-weight: 300;
-        padding: 0;
-        margin: 0;
-        text-transform: capitalize;
-        color: #3c4144;
+	h2 {
+      @include heading-font(2rem);
+      margin: 0;
+      font-weight: normal;
+      text-transform: uppercase;
         span {
             background: -webkit-linear-gradient(135deg, #23966c, #faaa54, #e23b4a);
             -webkit-background-clip: text;

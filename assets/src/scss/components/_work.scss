@@ -1,8 +1,32 @@
 .thumbnails {
   text-align: center;
-}
-.thumbnails img {
-  margin: 10px;
+  color: #006CAD;
+
+  .control {
+    background-color: #E6E6E6;
+
+
+    h2 {
+      display: inline-block;
+      @include heading-font(3rem);
+      font-weight: normal;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      margin-bottom: 1.7rem;
+      text-transform: uppercase;
+      overflow: hidden;
+
+      &:hover {
+        border: 2px solid #006CAD;
+        border-radius: 0;
+      }
+    }
+  }
+  img {
+    margin: 10px;
+  }
 }
 
 .grid {

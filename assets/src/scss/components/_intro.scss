@@ -11,6 +11,7 @@
 	z-index: 0;
 	color: #fff;
 	text-align: center;
+  overflow: hidden;
 
   // Below 48em (768px)
   @include media("<md") {
@@ -63,9 +64,13 @@
 
         // Above 34em (544px)
         @include media(">sm") {
-          @include heading-font(4.5rem);
+          @include heading-font(4rem);
+          font-family: 'Monoton', cursive;
+          font-weight: 900;
           font-weight: normal;
           color: #fff;
+          text-transform: uppercase;
+          word-spacing: 30px;
         }
 
         // Below 62em (992px)
@@ -75,7 +80,7 @@
       }
 
       h4 {
-        @include primary-font(1.6rem);
+        @include heading-para(1.6rem);
         color: #fff;
         text-align: center;
         text-transform: none;
@@ -170,56 +175,14 @@
 	
 }
 
-
-.loading {
-  position: absolute;
-  top: 50%;
-  right: 0%;
-}
-.loading-bar {
-  display: inline-block;
-  width: 4px;
-  height: 18px;
-  border-radius: 4px;
-  animation: loading 1s ease-in-out infinite;
-}
-.loading-bar:nth-child(1) {
-  background-color: #3498db;
-  animation-delay: 0;
-}
-.loading-bar:nth-child(2) {
-  background-color: #c0392b;
-  animation-delay: 0.09s;
-}
-.loading-bar:nth-child(3) {
-  background-color: #f1c40f;
-  animation-delay: .18s;
-}
-.loading-bar:nth-child(4) {
-  background-color: #27ae60;
-  animation-delay: .27s;
-}
-
-@keyframes loading {
-  0% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1, 2.2);
-  }
-  40% {
-    transform: scale(1);
-  }
-}
-
 .spinner {
 	position: absolute;
 	right: 0;
   margin: 50px;
   height: 28px;
   width: 28px;
-  animation: rotate 0.8s infinite linear;
-  border: 8px solid #fff;
+  animation: rotate 1s infinite linear;
+  border: 5px solid #f4f4f4;
   border-right-color: transparent;
   border-radius: 50%;
 }

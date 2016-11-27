@@ -180,8 +180,9 @@ table.table tr th {
 	background-attachment: fixed;
 	background-size:  cover;  */
   height: 100vh;
+  overflow: hidden; 
   color: #fff;
-  text-align: center; 
+  text-align: center;
   background: #f09819;
   /* fallback for old browsers */
   background: -webkit-gradient(linear, right top, left top, from(#f09819), to(#edde5d));

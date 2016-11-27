@@ -274,7 +274,11 @@ table.table tr th {
   #intro .container .intro-text h1 {
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Monoton', cursive;
+<<<<<<< HEAD
     font-size: 4rem;
+=======
+    font-size: 4.5rem;
+>>>>>>> fd6db8216006e0f8fa70f21c4c9b3c54c0b9ce6f
     font-weight: 600;
     font-weight: 900;
     font-weight: normal;
@@ -302,6 +306,10 @@ table.table tr th {
   padding: 0;
   margin: 0;
   margin-bottom: 3rem; 
+<<<<<<< HEAD
+=======
+  font-family: 'Lato', sans-serif;
+>>>>>>> fd6db8216006e0f8fa70f21c4c9b3c54c0b9ce6f
   font-family: 'Russo One', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5625;
@@ -330,16 +338,20 @@ table.table tr th {
   -webkit-background-size: 300% 300%;
           background-size: 300% 300%;
   border: none;
-  border: 1px solid #fff; 
+  border: 1px solid #fff;
   border-radius: 0;
+  -webkit-box-shadow: 0 14px 24px 0 rgba(50, 48, 57, .25);
+          box-shadow: 0 14px 24px 0 rgba(50, 48, 57, .25); 
   -webkit-transition: all .7s ease-out;
        -o-transition: all .7s ease-out;
           transition: all .7s ease-out;
 }
 #intro .container .btn:hover {
   color: #fff;
-  background-position: 99% 50%; 
+  background-position: 99% 50%;
   border: 1px solid rgba(223, 190, 106, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 #intro .signal {
   position: absolute;
@@ -537,7 +549,8 @@ table.table tr th {
 
 #proficiency {
   height: 100vh;
-  text-align: center; 
+  padding: 10rem; 
+  text-align: center;
   background: #24c6dc;
   /* fallback for old browsers */
   background: -webkit-gradient(linear, right top, left top, from(#24c6dc), to(#514a9d));
@@ -550,12 +563,18 @@ table.table tr th {
     height: auto;
   }
 }
+<<<<<<< HEAD
 #proficiency .heading-text {
   padding-top: 6rem;
 }
 #proficiency .heading-text h2 {
   display: inline-block;
   margin-bottom: 2rem; 
+=======
+#proficiency .heading-text h1 {
+  padding: 0;
+  margin: 0;
+>>>>>>> fd6db8216006e0f8fa70f21c4c9b3c54c0b9ce6f
   font-family: 'Ubuntu', sans-serif;
   font-size: 3rem;
   font-weight: 600;
@@ -614,18 +633,24 @@ table.table tr th {
     #proficiency .circle-box #redcircle,
     #proficiency .circle-box #yellowcircle,
     #proficiency .circle-box #blackcircle {
+<<<<<<< HEAD
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
           box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
 }
 
 .percircle.big {
   font-size: 200px;
+=======
+  -webkit-box-shadow: 0 14px 24px 0 rgba(50, 48, 57, .25);
+          box-shadow: 0 14px 24px 0 rgba(50, 48, 57, .25);
+>>>>>>> fd6db8216006e0f8fa70f21c4c9b3c54c0b9ce6f
 }
 
 /* Testimonials */
 #testimonial {
   height: 100vh;
-  text-align: center; 
+  padding: 7rem; 
+  text-align: center;
   background: #67b26f;
   /* fallback for old browsers */
   background: -webkit-gradient(linear, right top, left top, from(#67b26f), to(#4ca2cd));

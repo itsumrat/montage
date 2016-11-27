@@ -1,6 +1,5 @@
 #get-in-touch {
-	background: #EFEFBB; /* fallback for old browsers */
-	background: linear-gradient(to left, #EFEFBB , #D4D3DD); 
+	background: #ebebeb;
 	height: 300px;
 	padding: 3rem 0 0 0;  
 	text-align: center; 
@@ -13,17 +12,11 @@
       @include heading-font(2rem);
       margin: 0;
       font-weight: normal;
-      text-transform: uppercase;
-        span {
-            background: -webkit-linear-gradient(135deg, #23966c, #faaa54, #e23b4a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+      color: #004975;
         // Below 34em (544px)
         @include media(">sm") {
-            @include heading-font(3rem);
+            @include heading-font(2.5rem);
             font-weight: normal;
-            color: #1D1F20;
         }
 
         // Below 62em (992px)
@@ -33,7 +26,8 @@
 	} 
 
 	h3 {
-		color: #7baecd;
+		color: #004975;
+		font-size: 20px;
 	}
 
 	.social-icon {
@@ -43,13 +37,24 @@
 		li {
 			display: inline;
 			margin-right: 0.5rem;
-			padding: 0.9rem;
-			border-radius: 50%;
-			background: #ff00cc; /* fallback for old browsers */
-			background: linear-gradient(to left, #ff00cc , #333399); 
+			padding: 0.5rem 0.6rem;
+			border-radius: 50%; 
 
 			&:first-child {
-				padding: 0.9rem 1.1rem;
+				padding: 0.5rem 0.8rem;
+				background-color: #5883c0;
+			}
+
+			&:nth-child(2) {
+				background-color: #63bee0;
+			}
+
+			&:nth-child(3) {
+				background-color: #d35051;
+			}
+
+			&:nth-child(4) {
+				background-color: #005cff;
 			}
 
 			i {

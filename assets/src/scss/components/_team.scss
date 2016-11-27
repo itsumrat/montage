@@ -1,0 +1,63 @@
+#team {
+	padding: 3rem 0;
+
+	figure {
+		img {
+			border-radius: 50%;
+		}
+
+		figcaption {
+			text-align: center;
+			padding-right: 33px;
+			padding-top: 20px;
+			font-size: 16px;
+			font-weight: bold;
+
+			span {
+				color: #006cad;
+				font-size: 16px;
+				font-weight: normal;
+			}
+			p {
+				font-size: 15px;
+				font-weight: normal;
+				padding-top: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.social-icon {
+				list-style: none;
+				margin-top: 2.5rem;
+
+				li {
+					display: inline;
+					padding: .17rem 0.5rem;
+					margin-right: 0.5rem;					
+					border-radius: 50%; 
+
+					&:first-child {
+						padding: 0.2rem 0.7rem;
+						background-color: #5883c0;
+					}
+
+					&:nth-child(2) {
+						background-color: #63bee0;
+					}
+
+					&:nth-child(3) {
+						background-color: #d35051;
+					}
+
+					&:nth-child(4) {
+						background-color: #005cff;
+					}
+
+					i {
+						color: #fff;
+						font-size: 9px;
+					}      
+				}
+			}
+		}
+	}
+}

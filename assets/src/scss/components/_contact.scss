@@ -11,9 +11,19 @@
     	left: 30%;
     	color: #fff;
 
+    	// Below 34em (544px)
+		@include media("<sm") {
+			left: 10%;
+		}
+
     	h1 {
     		@include heading-font(3rem);
     		margin: 0;
+
+    		// Below 34em (544px)
+			@include media("<sm") {
+				font-size: 2rem;
+			}
     	}
     }
 }
@@ -30,6 +40,10 @@
 			background-color: transparent;
 			border-radius: 24px;
 			font-weight: 500;
+			// Below 34em (544px)
+			@include media("<sm") {
+				width: 100%;
+			}
 
 			&:hover {
 				background-color: #004975;
@@ -58,10 +72,19 @@
 .two-col{
   width: 50%;
   padding: 10px;
+
+  // Below 34em (544px)
+	@include media("<sm") {
+		width: 100%;
+	}
 }
 
 textarea#exampleTextarea {
     border-radius: 14px;
+    // Below 34em (544px)
+	@include media("<sm") {
+		width: 275px;
+	}
 }
 
 @media (min-width: 34em) {

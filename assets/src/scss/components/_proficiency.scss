@@ -4,6 +4,11 @@
 	text-align: center;
 	padding: 10rem;
 
+	// Below 34em (544px)
+      @include media("<sm") {
+        padding: 1.2rem;
+      }
+
 	// Below 62em (992px)
 	@include media("<lg") {
 		height: auto;
@@ -11,24 +16,18 @@
 
 	.heading-text {
 		padding-top: 6rem;
-		h2 {
-			display: inline-block;
-	      @include heading-font(3rem);
-	      font-weight: normal;
-	      text-transform: uppercase;
-	      margin-bottom: 2rem;
+
+		// Below 34em (544px)
+	      @include media("<sm") {
+	        padding: 0;
+	      }
+
 		h1 {
-			@include heading-font(2.7rem);
+			@include heading-font(2rem);
 			font-weight: 500;
 			padding: 0;
 			margin: 0;
 			text-transform: capitalize;
-
-			span {
-				background: -webkit-linear-gradient(135deg, #FF9F65, #DED37E, #26BDA6);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-			}
 
 			// Below 34em (544px)
 			@include media(">sm") {
@@ -56,6 +55,11 @@
 	.circle-box {
 		display: inline-block;
 
+		// Below 34em (544px)
+		@include media("<sm") {
+			padding-left: 4rem;
+		} 
+
 		#bluecircle,
 		#redcircle,
 		#yellowcircle,
@@ -63,7 +67,6 @@
 			@include ui-card;
 		}
 	}
-}
 }
 .percircle.big {
     font-size: 200px;

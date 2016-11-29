@@ -15,6 +15,11 @@ header {
     left: 0;
     width: 100%;
     z-index: 9;
+
+    // Below 34em (544px)
+    @include media("<sm") {
+      height: 4rem;
+    }
 }
 .active {
     background: #1F2532;
@@ -26,6 +31,10 @@ header {
 .site-logo {
     img {
       width: 80%;
+      // Below 34em (544px)
+      @include media("<sm") {
+        width: 65%;
+      }
     }
 }
 

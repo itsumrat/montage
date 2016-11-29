@@ -5,8 +5,7 @@
 	background-attachment: fixed;
 	background-size:  cover;  */
 	height: 100vh;
-	background: #F09819; /* fallback for old browsers */
-  background: linear-gradient(to left, #F09819 , #EDDE5D);
+	background: #e6e6e6;
 	position: relative;
 	z-index: 0;
 	color: #fff;
@@ -21,6 +20,11 @@
   video {
     min-height: 100%;
     min-width: 100%;
+
+    // Below 34em (544px)
+    @include media("<sm") {
+      display: none;
+    }
   }
 
   .overlay {
@@ -43,6 +47,11 @@
     .intro-text {
       margin-top: 13rem;
       text-align: center;
+
+      // Below 34em (544px)
+      @include media("<sm") {
+        margin-top: 3rem;
+      }
 
       h1 {
         @include heading-font(2.7rem);
@@ -75,7 +84,7 @@
 
         // Below 62em (992px)
         @include media("<lg") {
-          @include heading-font(3.7rem);
+          @include heading-font(2.2rem);
         }
       }
 
@@ -88,6 +97,11 @@
         padding: 0;
         margin: 0;
         margin-bottom: 3rem;
+
+        // Below 34em (544px)
+        @include media("<sm") {
+          font-size: 1.4rem;
+        }
       }
     }
     .btn {

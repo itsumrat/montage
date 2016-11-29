@@ -183,12 +183,7 @@ table.table tr th {
   overflow: hidden; 
   color: #fff;
   text-align: center;
-  background: #f09819;
-  /* fallback for old browsers */
-  background: -webkit-gradient(linear, right top, left top, from(#f09819), to(#edde5d));
-  background: -webkit-linear-gradient(right, #f09819, #edde5d);
-  background:      -o-linear-gradient(right, #f09819, #edde5d);
-  background:         linear-gradient(to left, #f09819, #edde5d);
+  background: #e6e6e6;
 }
 @media (max-width: 47.99em) {
   #intro {
@@ -198,6 +193,11 @@ table.table tr th {
 #intro video {
   min-width: 100%; 
   min-height: 100%;
+}
+@media (max-width: 33.99em) {
+  #intro video {
+    display: none;
+  }
 }
 #intro .overlay {
   position: absolute;
@@ -217,6 +217,11 @@ table.table tr th {
 #intro .container .intro-text {
   margin-top: 13rem;
   text-align: center;
+}
+@media (max-width: 33.99em) {
+  #intro .container .intro-text {
+    margin-top: 3rem;
+  }
 }
 #intro .container .intro-text h1 {
   padding: 0;
@@ -290,7 +295,7 @@ table.table tr th {
 @media (max-width: 61.99em) {
   #intro .container .intro-text h1 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 3.7rem;
+    font-size: 2.2rem;
     font-weight: 600;
     line-height: 1.5;
 
@@ -309,6 +314,11 @@ table.table tr th {
   color: #fff;
   text-align: center;
   text-transform: none;
+}
+@media (max-width: 33.99em) {
+  #intro .container .intro-text h4 {
+    font-size: 1.4rem;
+  }
 }
 #intro .container .btn {
   display: inline-block;
@@ -545,6 +555,11 @@ table.table tr th {
   text-align: center;
   background: #fff;
 }
+@media (max-width: 33.99em) {
+  #proficiency {
+    padding: 1.2rem;
+  }
+}
 @media (max-width: 61.99em) {
   #proficiency {
     height: auto;
@@ -553,24 +568,16 @@ table.table tr th {
 #proficiency .heading-text {
   padding-top: 6rem;
 }
-#proficiency .heading-text h2 {
-  display: inline-block;
-  margin-bottom: 2rem; 
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  font-weight: normal;
-  line-height: 1.5;
-  text-transform: uppercase;
-
-  -webkit-font-feature-settings: "kern" 1;
-  text-rendering: optimizeLegibility;
+@media (max-width: 33.99em) {
+  #proficiency .heading-text {
+    padding: 0;
+  }
 }
-#proficiency .heading-text h2 h1 {
+#proficiency .heading-text h1 {
   padding: 0;
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 600;
   font-weight: 500;
   line-height: 1.5;
@@ -579,14 +586,8 @@ table.table tr th {
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
-#proficiency .heading-text h2 h1 span {
-  background: -webkit-linear-gradient(135deg, #ff9f65, #ded37e, #26bda6);
-  -webkit-background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-}
 @media (min-width: 34.01em) {
-  #proficiency .heading-text h2 h1 {
+  #proficiency .heading-text h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.5rem;
     font-weight: 600;
@@ -599,7 +600,7 @@ table.table tr th {
   }
 }
 @media (max-width: 61.99em) {
-  #proficiency .heading-text h2 h1 {
+  #proficiency .heading-text h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.7rem;
     font-weight: 600;
@@ -609,7 +610,7 @@ table.table tr th {
     text-rendering: optimizeLegibility;
   }
 }
-#proficiency .heading-text h2 h5 {
+#proficiency .heading-text h5 {
   padding: 0;
   margin: 0;
   margin-bottom: 5rem; 
@@ -620,13 +621,18 @@ table.table tr th {
   text-align: center;
   text-transform: none;
 }
-#proficiency .heading-text .circle-box {
+#proficiency .circle-box {
   display: inline-block;
 }
-#proficiency .heading-text .circle-box #bluecircle,
-      #proficiency .heading-text .circle-box #redcircle,
-      #proficiency .heading-text .circle-box #yellowcircle,
-      #proficiency .heading-text .circle-box #blackcircle {
+@media (max-width: 33.99em) {
+  #proficiency .circle-box {
+    padding-left: 4rem;
+  }
+}
+#proficiency .circle-box #bluecircle,
+    #proficiency .circle-box #redcircle,
+    #proficiency .circle-box #yellowcircle,
+    #proficiency .circle-box #blackcircle {
   -webkit-box-shadow: 0 14px 24px 0 rgba(50, 48, 57, .25);
           box-shadow: 0 14px 24px 0 rgba(50, 48, 57, .25);
 }
@@ -642,38 +648,36 @@ table.table tr th {
   text-align: center;
   background: #e6e6e6;
 }
+@media (max-width: 33.99em) {
+  #testimonial {
+    padding: 0;
+  }
+}
 @media (max-width: 61.99em) {
   #testimonial {
     height: auto;
   }
 }
 #testimonial h2 {
-  display: inline-block;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 600;
   font-weight: normal;
   line-height: 1.5;
+  color: #006cad; 
   text-transform: uppercase;
 
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
-}
-#testimonial h2 span {
-  background: -webkit-linear-gradient(135deg, #23966c, #faaa54, #e23b4a);
-  -webkit-background-clip: text;
-
-  -webkit-text-fill-color: transparent;
 }
 @media (min-width: 34.01em) {
   #testimonial h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.5rem;
     font-weight: 600;
-    font-weight: normal;
+    font-weight: 900; 
     line-height: 1.5;
-    color: #1d1f20; 
 
     -webkit-font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
@@ -682,7 +686,7 @@ table.table tr th {
 @media (max-width: 61.99em) {
   #testimonial h2 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 3.7rem;
+    font-size: 2.7rem;
     font-weight: 600;
     line-height: 1.5;
 
@@ -821,6 +825,11 @@ table.table tr th {
   border: 1px solid #f5f5f5;
   border-radius: 150px !important;
 }
+@media (max-width: 33.99em) {
+  #testimonial .testimonials .item-2 figure img {
+    float: none;
+  }
+}
 #testimonial .testimonials .item-2 figure figcaption {
   clear: both;
 }
@@ -885,11 +894,6 @@ table.table tr th {
   text-align: center; 
   background: #ebebeb;
 }
-@media (max-width: 33.99em) {
-  #get-in-touch {
-    height: auto;
-  }
-}
 #get-in-touch h2 {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
@@ -917,7 +921,7 @@ table.table tr th {
 @media (max-width: 61.99em) {
   #get-in-touch h2 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 3.7rem;
+    font-size: 2.3rem;
     font-weight: 600;
     line-height: 1.5;
 
@@ -929,9 +933,23 @@ table.table tr th {
   font-size: 20px; 
   color: #004975;
 }
+@media (max-width: 33.99em) {
+  #get-in-touch h3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+}
 #get-in-touch .social-icon {
   margin-top: 2.5rem; 
   list-style: none;
+}
+@media (max-width: 33.99em) {
+  #get-in-touch .social-icon {
+    height: auto;
+    padding-bottom: 2rem;
+  }
 }
 #get-in-touch .social-icon li {
   display: inline;
@@ -1010,11 +1028,19 @@ table.table tr th {
 
 #team-head {
   position: relative;
-  width: 100%; 
+  width: 100%;
   height: 50vh;
+  color: #fff; 
   background: url(https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
           background-size: cover;
+}
+@media (max-width: 33.99em) {
+  #team-head .text {
+    position: absolute;
+    left: 9%; 
+    margin-top: 5rem;
+  }
 }
 
 #team {
@@ -1023,12 +1049,24 @@ table.table tr th {
 #team figure img {
   border-radius: 50%;
 }
+@media (max-width: 33.99em) {
+  #team figure img {
+    width: 150px;
+    height: 150px;
+    margin-left: 6rem;
+  }
+}
 #team figure figcaption {
   padding-top: 20px;
   padding-right: 33px;
   font-size: 16px;
   font-weight: bold; 
   text-align: center;
+}
+@media (max-width: 33.99em) {
+  #team figure figcaption {
+    padding-right: 0;
+  }
 }
 #team figure figcaption span {
   font-size: 16px;
@@ -1084,6 +1122,11 @@ table.table tr th {
   left: 30%;
   color: #fff;
 }
+@media (max-width: 33.99em) {
+  #contact-intro .text {
+    left: 10%;
+  }
+}
 #contact-intro .text h1 {
   margin: 0; 
   font-family: 'Ubuntu', sans-serif;
@@ -1093,6 +1136,11 @@ table.table tr th {
 
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
+}
+@media (max-width: 33.99em) {
+  #contact-intro .text h1 {
+    font-size: 2rem;
+  }
 }
 
 #contact-form {
@@ -1108,6 +1156,11 @@ table.table tr th {
   background-color: transparent;
   border: 2px solid #004975;
   border-radius: 24px;
+}
+@media (max-width: 33.99em) {
+  #contact-form .send-btn button {
+    width: 100%;
+  }
 }
 #contact-form .send-btn button:hover {
   color: #fff; 
@@ -1137,9 +1190,19 @@ table.table tr th {
   width: 50%;
   padding: 10px;
 }
+@media (max-width: 33.99em) {
+  .two-col {
+    width: 100%;
+  }
+}
 
 textarea#exampleTextarea {
   border-radius: 14px;
+}
+@media (max-width: 33.99em) {
+  textarea#exampleTextarea {
+    width: 275px;
+  }
 }
 
 @media (min-width: 34em) {
@@ -1182,6 +1245,11 @@ header {
   -webkit-box-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 33.99em) {
+  header {
+    height: 4rem;
+  }
+}
 
 .active {
   background: #1f2532;
@@ -1191,6 +1259,11 @@ header {
 
 .site-logo img {
   width: 80%;
+}
+@media (max-width: 33.99em) {
+  .site-logo img {
+    width: 65%;
+  }
 }
 
 /* okayNav styles */

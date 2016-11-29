@@ -2,11 +2,7 @@
 	background: #ebebeb;
 	height: 300px;
 	padding: 3rem 0 0 0;  
-	text-align: center; 
-	// Below 34em (544px)
-	@include media("<sm") {
-		height: auto;
-	}  
+	text-align: center;  
 
 	h2 {
       @include heading-font(2rem);
@@ -21,18 +17,29 @@
 
         // Below 62em (992px)
         @include media("<lg") {
-            @include heading-font(3.7rem);
+            @include heading-font(2.3rem);
         }
 	} 
 
 	h3 {
 		color: #004975;
 		font-size: 20px;
+
+		// Below 34em (544px)
+	     @include media("<sm") {
+	       display: flex;
+	     }
 	}
 
 	.social-icon {
 		list-style: none;
 		margin-top: 2.5rem;
+
+		// Below 34em (544px)
+		@include media("<sm") {
+			height: auto;
+			padding-bottom: 2rem;
+		} 
 
 		li {
 			display: inline;

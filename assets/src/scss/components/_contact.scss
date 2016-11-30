@@ -4,17 +4,12 @@
     position: relative;
     height: 50vh;
     width: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
 
     .text {
-    	position: absolute;
-    	top: 20vh;
-    	left: 30%;
     	color: #fff;
-
-    	// Below 34em (544px)
-		@include media("<sm") {
-			left: 10%;
-		}
 
     	h1 {
     		@include heading-font(3rem);
@@ -48,6 +43,7 @@
 			&:hover {
 				background-color: #004975;
 				color: #fff;
+				font-weight: bold;
 			}
 		}
 	}

@@ -5,23 +5,33 @@
     height: 50vh;
     width: 100%;
     color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
 
-    // Below 34em (544px)
-	@include media("<sm") {
-		.text {
-			position: absolute;
-			margin-top: 5rem;
-			left: 9%;
-	    }
-	}
-    
+    .text {
+		h1 {
+			@include heading-font(3.5rem);
+			padding: 0;
+			margin: 0;
+		}
+		p {
+			@include heading-para(14px);
+		}
+    }
 }
+
 #team {
 	padding: 3rem 0;
 
 	figure {
 		img {
 			border-radius: 50%;
+			height: 150px;
+		    width: 150px;
+		    margin: 0 auto;
+		    /* text-align: center; */
+		    display: flex;
 
 			// Below 34em (544px)
 			@include media("<sm") {
@@ -33,7 +43,7 @@
 
 		figcaption {
 			text-align: center;
-			padding-right: 33px;
+			padding-right: 11px;
 			padding-top: 20px;
 			font-size: 16px;
 			font-weight: bold;

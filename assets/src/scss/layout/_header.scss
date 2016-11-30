@@ -22,13 +22,14 @@ header {
     }
 }
 .active {
-    background: #1F2532;
+    background: #fff;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .site-logo {
+  margin-left: 1rem;
     img {
       width: 80%;
       // Below 34em (544px)

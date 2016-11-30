@@ -19,8 +19,35 @@
       @include heading-font(2.7rem);
       font-weight: normal;
       text-transform: uppercase;
-      margin-bottom: 2rem;
+      margin-top: -2.2rem;
+      margin-bottom: 5rem;
       color: #006cad;
+
+      // Below 34em (544px)
+        @include media("<sm") {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        border-bottom: 1px solid #006cad;
+        border-top: 1px solid #006cad;
+        background-color: #006cad;
+        top: 0;
+        width: 280px;
+      }
+
+      &:before {
+        right: 100%;
+      }
+
+      &:after {
+        left: 100%;
+      }
         // Below 34em (544px)
         @include media(">sm") {
             @include heading-font(3.5rem);
@@ -29,11 +56,12 @@
 
         // Below 62em (992px)
         @include media("<lg") {
-            @include heading-font(2.7rem);
+            @include heading-font(1.7rem);
         }
     }
 
     .testimonials {
+        margin-right: 1rem;
         .item-1 {
             margin-bottom: 2rem;
             blockquote {

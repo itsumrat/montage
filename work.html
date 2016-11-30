@@ -59,7 +59,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="team.html">people</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="index.html#testimonial">Testimonials</a></li>
                 <li><a href="contact.html">Contacts</a></li>
             </ul>
@@ -73,7 +73,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-xl-10 col-xl-offset-4 col-lg-10 col-lg-offset-4 col-md-10 col-md-offset-1 col-sm-12">
+                <div class="col-xl-10 col-xl-offset-1 col-md-8 col-md-offset-2 col-sm-12">
                     <div class="intro-text">
                         <h4>Our joy and passion. Our honor. These are projects that gave us true pleasure to work on them. Each one was interesting and complex in its own way. Thinking of how many people we helped to bring their fascinating ideas to life makes us happy.</h4>
                     </div>
@@ -94,46 +94,37 @@
         </div>
     </section>
 
-    <section>
-      <div class="thumbnails">
-        <div class="control">
-          <h2>Portfolio</h2>
-          <a href="#" class="btn" data-filter="*">all</a>
-          <a href="#" class="btn" data-filter=".metal">web development</a>
-          <a href="#" class="btn" data-filter=".transition">digital marketing</a>
-          <a href="#" class="btn" data-filter=".alkali, .alkaline-earth">branding</a>
-          <a href="#" class="btn" data-filter=":not(.transition)">photography</a>
-          <a href="#" class="btn" data-filter=".metal:not(.transition)">design</a>
-        </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <input type="radio" id="branding" name="color" />
+            <label for="branding">BRANDING</label>
+            <input type="radio" id="app" name="color"/>
+            <label for="app">APP</label>
+            <input type="radio" id="design" name="color"/>
+            <label for="design">DESIGN</label>
+            <input type="radio" id="all" name="color"/>
+            <label for="all">ALL</label>
 
-        <div class="grid">
-          <div class="element-item transition metal">
-            <a href="http://www.magnetmediafilms.com/wp-content/uploads/2012/01/buffer_screenshot1.jpg" data-lightbox="example-1" data-title="my caption whatever here">
-              <img src="http://placehold.it/300x200&text=transition+website" alt="A Placeholder image" />
-            </a>
-            
-          </div>
-          <div class="element-item post-transition metal">
-            <img src="http://placehold.it/300x200&text=prototype+website" alt="" />
-          </div>
-          <div class="element-item alkali metal">
-            <img src="http://placehold.it/300x200&text=UX+website" alt="" /> 
-          </div>
-          <div class="element-item transition metal">
-            <img src="http://placehold.it/300x200&text=Illustration+website" alt="" />
-          </div>
-          <div class="element-item lanthanoid metal inner-transition">
-            <img src="http://placehold.it/300x200&text=graphic+website" alt="" />
-          </div>
-          <div class="element-item halogen nonmetal">
-            <img src="http://placehold.it/300x200&text=transition+prototype" alt="" />
-          </div>
-          <div class="element-item alkaline-earth metal">
-            <img src="http://placehold.it/300x200&text=transition+website" alt="" />
+            <div class="tile branding">1</div>
+            <div class="tile app">2</div>
+            <div class="tile branding">3</div>
+            <div class="tile design">4</div>
+            <div class="tile branding">5</div>
+            <div class="tile app">6</div>
+            <div class="tile app">7</div>
+            <div class="tile design">8</div>
+            <div class="tile branding">9</div>
+            <div class="tile design">10</div>
+            <div class="tile app">11</div>
+            <div class="tile design">12</div>
+            <div class="tile branding">13</div>
+            <div class="tile branding">14</div>
+            <div class="tile design">15</div>
+            <div class="tile app">16</div>
           </div>
         </div>
-      </div>
-    </section><!--/.featured-works-->
+    </div><!--/.featured-works-->
 
     <footer>
         <div class="container">
@@ -150,8 +141,6 @@
   <script type="text/javascript" src="assets/vendor/okaynav/dist/js/jquery.okayNav-min.js"></script>
   <script type="text/javascript" src="assets/vendor/percircle/dist/js/percircle.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script type="text/javascript" src="assets/vendor/isotope/dist/isotope.pkgd.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.1/js/lightbox.min.js"></script>
   <script type="text/javascript" src="assets/dist/js/app.min.js"></script>
 </body>
 </html>

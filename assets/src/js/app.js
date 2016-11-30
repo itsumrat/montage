@@ -18,21 +18,6 @@ jQuery(document).ready(function($){
 		originY: 0.5
 	});
 
-	// Circle
-	$("#bluecircle").percircle({
-		progressBarColor: "#30bae7",
-		secs: 15,
-		timeUpText: 'Finally!'
-	});
-	$("#yellowcircle").percircle({
-		progressBarColor: "#d74680"
-	});
-	$("#redcircle").percircle({
-		progressBarColor: "#15c7a8"
-	});
-	$("#blackcircle").percircle({
-		progressBarColor: "#eb7d4b"
-	});
 
 	// credit where credit's due; http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design
 	var element, circle, d, x, y;
@@ -59,13 +44,25 @@ jQuery(document).ready(function($){
 	})
 
 	// Work
-	$('a[href="#"]').click(function(e){e.preventDefault();});
+	
+	$('.filter a').click(function(e) {
+	  e.preventDefault();
+	  var a = $(this).attr('href');
+	  a = a.substr(1);
+	  $('.sets a').each(function() {
+	    if (!$(this).hasClass(a) && a != 'all')
+	      $(this).addClass('hide');
+	    else
+	      $(this).removeClass('hide');
+	  });
 
-	var $grid = $('.grid').isotope();
-	// filter items on button click
-	$('.control').on( 'click', 'a', function() {
-	  var filterValue = $(this).attr('data-filter');
-	  $grid.isotope({ filter: filterValue });
+	});
+
+	$('.sets a').click(function(e) {
+	  e.preventDefault();
+	  var $i = $(this);
+	  $('.sets a').not($i).toggleClass('pophide');
+	  $i.toggleClass('pop');
 	});
 
 
